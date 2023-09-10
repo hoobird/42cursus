@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hulim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 15:58:52 by hulim             #+#    #+#             */
-/*   Updated: 2023/09/10 17:01:23 by hulim            ###   ########.fr       */
+/*   Created: 2023/09/10 17:14:47 by hulim             #+#    #+#             */
+/*   Updated: 2023/09/10 17:29:07 by hulim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+char	*ft_strchr(const char *s, int c)
 {
-	char	*dest1;
-	char	*src1;
+	int	count;
+	int	len;
 
-	if (dest >= src)
+	count = 0;
+	len = ft_strlen(s);
+	while (count <= len)
 	{
-		dest1 = (char *) dest;
-		src1 = (char *) src;
-		while (n > 0)
+		if (s[count] == c)
 		{
-			dest1[n - 1] = src1[n - 1];
-			n--;
+			return (&((char *)s)[count]);
 		}
+		count++;
 	}
-	else
-	{
-		ft_memcpy(dest, src, n);
-	}
-	return (dest1);
+	return (0);
 }

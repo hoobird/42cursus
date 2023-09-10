@@ -16,14 +16,20 @@
 #include <assert.h>
 
 int main() {
-	char dest[10];
-	char *src = "hello Worlds";
+  char str1[] = "This is a test.";
+  char str2[] = "This is another test.";
 
-	ft_memset(dest, '2', 5);
-	//printf("%s\n",src);
-	printf("%s\n",dest);
+  int result;
 
-	//assert(strcmp(dest, src) == 0);
+  result = ft_memcmp(str1, str2, 17);
 
-    return 0;
+  if (result == 0) {
+    printf("The strings are equal.\n");
+  } else if (result < 0) {
+    printf("The first string is less than the second string.\n");
+  } else {
+    printf("The first string is greater than the second string.\n");
+  }
+
+  return 0;
 }
