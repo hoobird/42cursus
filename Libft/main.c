@@ -10,26 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
-#include <string.h>
-#include <assert.h>
+#include <stdio.h>
 
-int main() {
-  char str1[] = "This is a test.";
-  char str2[] = "This is another test.";
+int main()
+{
+	char s1[30] = "pen pineapple apple pen!";
 
-  int result;
+	char* ptr = ft_strnstr(s1, "pine", 10);
+	printf("%s\n", ptr);
+	//char* ptr1 = ft_strnstr(s1, "pine", 5);
+	//printf("%s\n", ptr1);
+	char* ptr2 = NULL;
+	printf("%s\n", ptr2);
 
-  result = ft_memcmp(str1, str2, 17);
-
-  if (result == 0) {
-    printf("The strings are equal.\n");
-  } else if (result < 0) {
-    printf("The first string is less than the second string.\n");
-  } else {
-    printf("The first string is greater than the second string.\n");
-  }
-
-  return 0;
+	return (0);
 }

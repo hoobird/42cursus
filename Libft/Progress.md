@@ -19,13 +19,13 @@
 - ft_strncmp	✅
 - ft_memchr	✅
 - ft_memcmp	✅
-- ft_strnstr
+- ft_strnstr	✅ (no header)
 - ft_atoi
 - ft_calloc
 - ft_strdup
-- ft_substr
-- ft_strjoin
-- ft_strtrim
+- ft_substr	✅ (no header)
+- ft_strjoin	✅ (no header)
+- ft_strtrim	✅ (no header)
 - ft_split
 - ft_itoa
 - ft_strmapi
