@@ -10,14 +10,22 @@ ft_putstr_fd ft_putendl_fd ft_putnbr_fd
 
 OBJ = $(SRC:.c=.o)
 
-TARGET = libft.a
+NAME = libft.a
 
-all: $(TARGET)
+all:	$(NAME)
 
-$(TARGET): $(OBJ)
-	ar rcs $@ $(OBJ)
+$(NAME):	$(OBJ)
+	ar rcs $(NAME) $(OBJ)
+	
+$(OBJ):	$(SRC)
+	$(CC)  $(CFLAGS) -c $(SRC)
 
 clean:
-	rm -f $(OBJ) $(TARGET)
+	rm -f $(OBJ)
+	
+fclean:	clean
+	rm -f $(NAME)
 
-.PHONY: all clean
+re:	fclean $(NAME)
+	
+.PHONY: all fclean clean re 

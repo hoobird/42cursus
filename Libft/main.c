@@ -13,16 +13,10 @@
 #include "libft.h"
 #include <stdio.h>
 
-int main()
-{
-	char s1[30] = "pen pineapple apple pen!";
+int main() {
+  int	a = 98765;
+  
+  printf("%s\n", ft_itoa(a));
 
-	char* ptr = ft_strnstr(s1, "pine", 10);
-	printf("%s\n", ptr);
-	//char* ptr1 = ft_strnstr(s1, "pine", 5);
-	//printf("%s\n", ptr1);
-	char* ptr2 = NULL;
-	printf("%s\n", ptr2);
-
-	return (0);
+  return 0;
 }

@@ -26,8 +26,8 @@
 - ft_substr	✅ (no header)
 - ft_strjoin	✅ (no header)
 - ft_strtrim	✅ (no header)
-- ft_split
-- ft_itoa
+- ft_split	✅ (no header)
+- ft_itoa	✅ (no header)
 - ft_strmapi
 - ft_striteri
 - ft_putchar_fd

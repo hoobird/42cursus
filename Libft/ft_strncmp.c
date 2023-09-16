@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
 	while (count < n && s1[count] && s2[count])

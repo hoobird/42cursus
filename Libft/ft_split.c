@@ -2,7 +2,7 @@
 
 int	ccount(char const *s, char c)
 {
-	char	ss;
+	char	*ss;
 	int		cnt;
 	
 	cnt = 0;
@@ -11,6 +11,7 @@ int	ccount(char const *s, char c)
 	{
 		if (*ss == c)
 			cnt++;
+		ss++;
 	}
 	return (cnt);
 }
@@ -18,16 +19,28 @@ int	ccount(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**output;
-	int		size;
-	int		c;
+	int		space;
+	char	*frt;
+	char	*bck;
+	char	*temp;
 	
-	size = ccount(s, c) + 1;
-	output = (char **) malloc(sizeof(char *) * size);
-	c = 0;
-	while (c < size - 1)
+	space = 0;
+	output = (char **) malloc(sizeof(char *) * ccount(s, c) + 1);
+	frt = (char *) s;
+	bck = frt;
+	while (*bck)
 	{
-		
-
+		if (*bck == c)
+		{
+			temp = malloc(bck - frt + 1);
+			ft_strlcpy(temp, frt, bck - frt + 1);
+			output[space++] = temp;
+			frt = bck + 1;
+		}
+		bck++;
 	}
-
+	temp = malloc(bck - frt + 1);
+	ft_strlcpy(temp, frt, bck - frt + 1);
+	output[space] = temp;
+	return (output);
 }
