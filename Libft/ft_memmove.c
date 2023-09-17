@@ -6,7 +6,7 @@
 /*   By: hulim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 15:58:52 by hulim             #+#    #+#             */
-/*   Updated: 2023/09/10 17:01:23 by hulim            ###   ########.fr       */
+/*   Updated: 2023/09/17 16:39:40 by hulim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char	*dest1;
 	char	*src1;
 
+	if (dest == NULL && src == NULL)
+		return (dest);
+	dest1 = (char *) dest;
 	if (dest >= src)
 	{
-		dest1 = (char *) dest;
 		src1 = (char *) src;
 		while (n > 0)
 		{
@@ -29,7 +31,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	else
 	{
-		ft_memcpy(dest, src, n);
+		ft_memcpy(dest1, src, n);
 	}
 	return (dest1);
 }

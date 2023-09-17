@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hulim <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/17 15:09:08 by hulim             #+#    #+#             */
+/*   Updated: 2023/09/17 17:52:47 by hulim            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	isset(char c, char const *set)
@@ -16,28 +28,29 @@ int	isset(char c, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		counter;
-	int		length;
-	char	*s2;
-	char	*retval;
+	char	*front;
+	char	*back;
+	char	*output;
+	int		i;
 
-	counter = 0;
-	length = ft_strlen(s1);
-	s2 = (char *) s1;
-	while (*s2)
-	{
-		if (isset(*s2, set))
-			length--;
-		s2++;
-	}
-	retval = malloc(sizeof(char) * (length + 1));
-	s2 = (char *) s1;
-	while (*s2)
-	{
-		if (!(isset(*s2, set)))
-			*retval++ = *s2;
-		s2++;
-	}
-	*retval = '\0';
-	return (retval - length);
+	if (!s1 || !set)
+		return (NULL);
+	front = (char *) s1;
+	back = front;
+	while (*(back + 1))
+		back++;
+	while (isset(*front, set))
+		front++;
+	while (isset(*back, set))
+		back--;
+	if (back < front)
+		return ("");
+	output = malloc(sizeof(char) * (back - front + 2));
+	if (output == NULL)
+		return (NULL);
+	i = 0;
+	while (front <= back)
+		output[i++] = *front++;
+	output[i] = 0;
+	return (output);
 }
