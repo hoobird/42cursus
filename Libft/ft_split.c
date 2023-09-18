@@ -6,30 +6,44 @@
 /*   By: hulim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 15:09:31 by hulim             #+#    #+#             */
-/*   Updated: 2023/09/17 20:20:42 by hulim            ###   ########.fr       */
+/*   Updated: 2023/09/19 04:16:59 by hoobird          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ccount(char const *s, char c)
+void	freeall(char **arr)
 {
-	char	*ss;
+	int	count;
+
+	count = 0;
+	while (arr[count])
+	{
+		free(arr[count]);
+		count++;
+	}
+	free(arr);
+}
+
+int	ccount(char *s, char c)
+{
 	int		cnt;
 
-	cnt = 0;
-	ss = (char *) s;
-	while (*ss)
+	cnt = 1;
+	if (ft_strlen(s) == 0)
+		return (0);
+	while (*s)
 	{
-		while (*ss == c)
-			ss++;
-		if (*ss)
+		if (*s == c)
+		{
 			cnt++;
-		while (*ss != c && *ss)
-			ss++;
+			while (*s == c)
+				s++;
+		}
+		s++;
 	}
 	return (cnt);
-}
+	}
 
 char	**ft_split(char const *s, char c)
 {
@@ -39,10 +53,10 @@ char	**ft_split(char const *s, char c)
 	char	*temp;
 
 	space = 0;
-	output = (char **) malloc(sizeof(char *) * (ccount(s, c) + 1));
+	output = (char **) malloc(sizeof(char *) * (ccount((char *)s, c) + 1));
 	if (output == NULL)
 		return (NULL);
-	output[ccount(s, c)] = NULL;
+	output[ccount((char *)s, c)] = NULL;
 	temp = (char *) s;
 	while (*temp)
 	{

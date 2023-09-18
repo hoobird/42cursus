@@ -20,7 +20,7 @@
 - ft_memchr	✅
 - ft_memcmp	✅
 - ft_strnstr	✅
-- ft_atoi	
+- ft_atoi	✅
 - ft_calloc	
 - ft_strdup	
 - ft_substr	✅
@@ -31,6 +31,6 @@
 - ft_strmapi	
 - ft_striteri	
 - ft_putchar_fd	✅
-- ft_putstr_fd	
-- ft_putendl_fd	
+- ft_putstr_fd	✅
+- ft_putendl_fd	✅
 - ft_putnbr_fd	

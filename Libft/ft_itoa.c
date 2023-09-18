@@ -6,7 +6,7 @@
 /*   By: hulim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 15:10:00 by hulim             #+#    #+#             */
-/*   Updated: 2023/09/17 20:43:13 by hulim            ###   ########.fr       */
+/*   Updated: 2023/09/19 00:37:04 by hoobird          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	countdigits(int n)
 {
 	int	count;
-	
+
 	if (n == 0)
 		return (1);
 	count = 0;
@@ -38,6 +38,8 @@ char	*ft_itoa(int n)
 
 	size = countdigits(n);
 	output = malloc(sizeof(char) * (size + 1));
+	if (output == NULL)
+		return (NULL);
 	output[size] = 0;
 	ind = 0;
 	nn = (long) n;

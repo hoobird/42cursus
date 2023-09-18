@@ -6,7 +6,7 @@
 /*   By: hoobird <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 20:35:22 by hoobird           #+#    #+#             */
-/*   Updated: 2023/09/18 20:36:40 by hoobird          ###   ########.fr       */
+/*   Updated: 2023/09/19 00:51:06 by hoobird          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,15 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	ft_putchar_fd('0' + n ,fd);
+	long	nn;
+
+	nn = (long) n;
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		nn = -nn;
+	}
+	if (nn >= 10)
+		ft_putnbr_fd(nn / 10, fd);
+	ft_putchar_fd('0' + nn % 10, fd);
 }

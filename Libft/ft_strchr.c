@@ -6,7 +6,7 @@
 /*   By: hulim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 17:14:47 by hulim             #+#    #+#             */
-/*   Updated: 2023/09/10 17:29:07 by hulim            ###   ########.fr       */
+/*   Updated: 2023/09/19 03:57:44 by hoobird          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ char	*ft_strchr(const char *s, int c)
 	len = ft_strlen(s);
 	while (count <= len)
 	{
-		if (s[count] == c)
+		if (s[count] == (unsigned char) c)
 		{
-			return (&((char *)s)[count]);
+			return ((char *)&s[count]);
 		}
 		count++;
 	}
-	return (0);
+	return (NULL);
 }
