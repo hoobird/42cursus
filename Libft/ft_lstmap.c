@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hulim <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: hoobird <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/19 21:24:33 by hulim             #+#    #+#             */
-/*   Updated: 2023/09/20 02:21:12 by hoobird          ###   ########.fr       */
+/*   Created: 2023/09/20 03:11:24 by hoobird           #+#    #+#             */
+/*   Updated: 2023/09/20 03:15:47 by hoobird          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int	counter;
 
-	if (lst == NULL)
-		return (0);
-	counter = 1;
-	while (lst->next != NULL)
+	if (!lst || !fi || !del)
+		return ;
+	while (lst)
 	{
-		counter++;
-		lst = lst->next;
+		f(lst->content);
 	}
-	return (counter);
 }
