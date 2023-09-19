@@ -6,13 +6,13 @@
 /*   By: hulim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 15:09:31 by hulim             #+#    #+#             */
-/*   Updated: 2023/09/19 17:13:02 by hulim            ###   ########.fr       */
+/*   Updated: 2023/09/19 20:35:46 by hulim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	freeall(char **arr)
+char	**freeall(char **arr)
 {
 	int	count;
 
@@ -22,7 +22,9 @@ void	freeall(char **arr)
 		free(arr[count]);
 		count++;
 	}
+	free(arr[count]);
 	free(arr);
+	return (NULL);
 }
 
 size_t	countwords(char *s, char c)
@@ -47,6 +49,21 @@ size_t	countwords(char *s, char c)
 	return (count);
 }
 
+char	**testt(int *ii, char **ss, char const *s, char c)
+{
+	*ii = 0;
+	*ss = (char *) s;
+	return ((char **) malloc(sizeof(char *) * (countwords(*ss, c) + 1)));
+}
+
+void	testb(char **ff, char **ss, char **bb, char c)
+{
+	*ff = *ss;
+	while (**ss != c && **ss)
+		(*ss)++;
+	*bb = *ss - 1;
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	*ss;
@@ -55,9 +72,7 @@ char	**ft_split(char const *s, char c)
 	char	*b;
 	int		i;
 
-	i = 0;
-	ss = (char *) s;
-	output = (char **) malloc(sizeof(char *) * (countwords(ss, c) + 1));
+	output = testt(&i, &ss, s, c);
 	if (output == NULL)
 		return (NULL);
 	output[countwords(ss, c)] = NULL;
@@ -65,16 +80,10 @@ char	**ft_split(char const *s, char c)
 	{
 		if (*ss != c)
 		{
-			f = ss;
-			while (*ss != c && *ss)
-				ss++;
-			b = ss - 1;
+			testb(&f, &ss, &b, c);
 			output[i] = malloc(sizeof(char) * (b - f + 2));
 			if (output[i] == NULL)
-			{
-				freeall(output);
-				return (NULL);
-			}
+				return (freeall(output));
 			ft_strlcpy(output[i++], f, b - f + 2);
 		}
 		if (*ss++ == 0)
