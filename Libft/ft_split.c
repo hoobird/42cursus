@@ -6,7 +6,7 @@
 /*   By: hulim <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 15:09:31 by hulim             #+#    #+#             */
-/*   Updated: 2023/09/19 04:16:59 by hoobird          ###   ########.fr       */
+/*   Updated: 2023/09/19 17:13:02 by hulim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,50 +25,60 @@ void	freeall(char **arr)
 	free(arr);
 }
 
-int	ccount(char *s, char c)
+size_t	countwords(char *s, char c)
 {
-	int		cnt;
+	size_t	count;
 
-	cnt = 1;
-	if (ft_strlen(s) == 0)
-		return (0);
+	count = 0;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s != c)
 		{
-			cnt++;
-			while (*s == c)
+			count++;
+			while (*s != c)
+			{
 				s++;
+				if (*s == 0)
+					return (count);
+			}
 		}
 		s++;
 	}
-	return (cnt);
-	}
+	return (count);
+}
 
 char	**ft_split(char const *s, char c)
 {
+	char	*ss;
 	char	**output;
-	int		space;
-	char	*frt;
-	char	*temp;
+	char	*f;
+	char	*b;
+	int		i;
 
-	space = 0;
-	output = (char **) malloc(sizeof(char *) * (ccount((char *)s, c) + 1));
+	i = 0;
+	ss = (char *) s;
+	output = (char **) malloc(sizeof(char *) * (countwords(ss, c) + 1));
 	if (output == NULL)
 		return (NULL);
-	output[ccount((char *)s, c)] = NULL;
-	temp = (char *) s;
-	while (*temp)
+	output[countwords(ss, c)] = NULL;
+	while (*ss)
 	{
-		if (*temp != c)
+		if (*ss != c)
 		{
-			frt = temp;
-			while (*temp != c && *temp != 0)
-				temp++;
-			output[space] = malloc(sizeof(char) * ((temp - 1) - frt + 2));
-			ft_strlcpy(output[space++], frt, (temp - 1) - frt + 2); 
+			f = ss;
+			while (*ss != c && *ss)
+				ss++;
+			b = ss - 1;
+			output[i] = malloc(sizeof(char) * (b - f + 2));
+			if (output[i] == NULL)
+			{
+				freeall(output);
+				return (NULL);
+			}
+			ft_strlcpy(output[i++], f, b - f + 2);
 		}
-		temp++;
+		if (*ss++ == 0)
+			break ;
 	}
 	return (output);
 }
