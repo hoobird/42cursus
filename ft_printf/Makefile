@@ -1,4 +1,4 @@
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 SRC = ft_isalnum.c ft_isalpha.c ft_isdigit.c ft_isascii.c ft_isprint.c \
@@ -14,7 +14,7 @@ ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 OBJ = $(SRC:.c=.o)
 OBJB = $(SRCB:.c=.o)
 
-NAME = libft.a
+NAME = libftprintf.a
 
 all:	$(NAME)
 
