@@ -27,20 +27,20 @@ static void	ft_printhex(unsigned int i, int whatcase)
 			ft_putchar((char)(i + 55));
 	}
 	else
-	{
 		ft_putchar((char)(i + 48));
-	}
 }
 
-int     ft_puthex(unsigned int i, int whatcase)
+int	ft_puthex(unsigned int i, int whatcase)
 {
 	int	len;
 
 	len = 0;
 	ft_printhex(i, whatcase);
+	if (i == 0)
+		return (1);
 	while (i > 0)
 	{
-		 i /= 16;
+		i /= 16;
 		len++;
 	}
 	return (len);

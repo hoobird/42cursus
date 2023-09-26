@@ -28,9 +28,11 @@ int	checkformat(va_list args, const char format)
 	else if (format == 'u')
 		lettercount += ft_putunint(va_arg(args, unsigned int));
 	else if (format == 'x')
-		lettercount += ft_puthex(va_arg(args, unsigned int), 0);
+		lettercount += ft_puthex(va_arg(args, unsigned long), 0);
 	else if (format == 'X')
-		lettercount += ft_puthex(va_arg(args, unsigned int), 1);
+		lettercount += ft_puthex(va_arg(args, unsigned long), 1);
+	else if (format == '%')
+		lettercount += ft_putpercent();
 	return (lettercount);
 }
 

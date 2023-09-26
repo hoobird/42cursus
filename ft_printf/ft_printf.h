@@ -26,6 +26,6 @@ int		ft_putpointer(unsigned long long pt);
 int		ft_putint(int i);
 int		ft_putunint(unsigned int ui);
 int		ft_puthex(unsigned int i, int whatcase);
-
+int		ft_putpercent(void);
 
 #endif

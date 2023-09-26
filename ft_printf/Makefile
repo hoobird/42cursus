@@ -1,7 +1,7 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = ft_printf.c ft_cat_c.c ft_cat_s.c  ft_cat_p.c ft_cat_id.c ft_cat_u.c ft_cat_xX.c 
+SRC = ft_printf.c ft_cat_c.c ft_cat_s.c  ft_cat_p.c ft_cat_id.c ft_cat_u.c ft_cat_xX.c ft_cat_percent.c
 
 OBJ = $(SRC:.c=.o)
 
