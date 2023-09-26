@@ -18,7 +18,14 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-int	ft_printf(const char *str, ...);
-int     checkformat(va_list args, const char format);
+int		ft_printf(const char *str, ...);
+int		checkformat(va_list args, const char format);
+int		ft_putchar(char c);
+int		ft_putstr(char *s);
+int		ft_putpointer(unsigned long long pt);
+int		ft_putint(int i);
+int		ft_putunint(unsigned int ui);
+int		ft_puthex(unsigned int i, int whatcase);
+
 
 #endif
