@@ -12,6 +12,7 @@
 
 #include "ft_printf.h"
 #include <stdio.h>
+#include <limits.h>
 
 int	main(void)
 {
@@ -19,14 +20,13 @@ int	main(void)
 	int *b = &a;
 	int len;
 	char *ss = NULL;
-	len = printf("real: %c %s", 'c', "goodbye world");
+	len = printf("real: %x", 0);
 	printf(" | len: %d\n", len);
-	len = ft_printf("ft  : %c %s", 'c', "goodbye world");
+	len = ft_printf("ft  : %x", 0);
 	printf(" | len: %d\n", len);
-	len = printf("real: %p", b);
+	len = printf("real: %x", LONG_MIN);
 	printf(" | len: %d\n", len);
-	len = ft_printf("ft  : %p", b);
+	len = ft_printf("ft  : %x", LONG_MIN);
 	printf(" | len: %d\n", len);
-	ft_printf("%s\n", ss);
 	return (0);
 }
