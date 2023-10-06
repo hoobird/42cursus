@@ -7,6 +7,9 @@ OBJ = $(SRC:.c=.o)
 
 NAME = libftprintf.a
 
+BUFFER_SIZE = 42
+BUFFER_FLAG = -D BUFFER_SIZE=
+
 LIBFTPATH = ./libft
 LIBFT = ./libft/libft.a
 
@@ -18,7 +21,7 @@ $(NAME): $(OBJ) $(LIBFT)
 	ar rcs $(NAME) $(OBJ) 
 	
 $(OBJ):	$(SRC)
-	$(CC)  $(CFLAGS) -c $(SRC)
+	$(CC)  $(CFLAGS) -c $(SRC) $(BUFFER_FLAG) $(BUFFER_SIZE)
 
 $(LIBFT):
 	make -C $(LIBFTPATH) all

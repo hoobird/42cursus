@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hoobird <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/23 11:22:31 by hoobird           #+#    #+#             */
-/*   Updated: 2023/09/26 19:01:06 by hoobird          ###   ########.fr       */
+/*   Created: 2023/09/26 21:03:11 by hoobird           #+#    #+#             */
+/*   Updated: 2023/09/26 21:04:26 by hoobird          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "get_next_line.h"
 
-# include "libft/libft.h"
-
-char	*get_next_line(int fd);
-
-#endif
+char	*get_next_line(int fd)
+{
+	char	*currline
+	if (fd < 0 || BUFFER_SIZE <= 0)
+		return (NULL);
+	
+}
