@@ -24,7 +24,7 @@ $(OBJ):	$(SRC)
 	$(CC)  $(CFLAGS) -c $(SRC) $(BUFFER_FLAG) $(BUFFER_SIZE)
 
 $(LIBFT):
-	make -C $(LIBFTPATH) all
+	make -C $(LIBFTPATH) bonus
 	
 clean:
 	make -C $(LIBFTPATH) clean
