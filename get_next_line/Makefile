@@ -1,37 +1,28 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = get_next_line.c 
+SRC = get_next_line.c get_next_line_utils.c
 
 OBJ = $(SRC:.c=.o)
 
-NAME = libftprintf.a
+NAME = get_next_line.a
 
-BUFFER_SIZE = 42
-BUFFER_FLAG = -D BUFFER_SIZE=
-
-LIBFTPATH = ./libft
-LIBFT = ./libft/libft.a
+BUFFER_SIZE = 10
+BUFFER_FLAG = -D BUFFER_SIZE=$(BUFFER_SIZE)
 
 
 all:	$(NAME)
 
-$(NAME): $(OBJ) $(LIBFT)
-	cp $(LIBFT) $(NAME)
+$(NAME): $(OBJ) 
 	ar rcs $(NAME) $(OBJ) 
 	
 $(OBJ):	$(SRC)
-	$(CC)  $(CFLAGS) -c $(SRC) $(BUFFER_FLAG) $(BUFFER_SIZE)
-
-$(LIBFT):
-	make -C $(LIBFTPATH) bonus
+	$(CC)  $(CFLAGS) -c $(SRC) # $(BUFFER_FLAG) 
 	
 clean:
-	make -C $(LIBFTPATH) clean
 	rm -f $(OBJ) $(OBJB)
 	
 fclean:	clean
-	make -C $(LIBFTPATH) fclean
 	rm -f $(NAME)
 
 re:	fclean all
