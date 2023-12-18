@@ -13,28 +13,17 @@
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE	32
+# endif
+
 # include <unistd.h>
 # include <stdlib.h>
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
-# endif
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}			t_list;
-t_list	*ft_lstnew(void *content);
-void	ft_lstadd_back(t_list **lst, t_list *new);
-int		hasnewline(t_list *list);
-void	currlinetolist(t_list **list, int fd);
-char	*linetostr(t_list *list);
-int		getoutputlen(t_list *list);
-void	resetlist(t_list **list);
 char	*get_next_line(int fd);
-t_list	*ft_lstlast(t_list *lst);
-void	ft_lstclear(t_list **lst, void (*del)(void*));
-void	listtostr(t_list *list, char *output);
-
+void	readnextline(int fd, char **memline);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strdup(const char *s);
+void	*ft_calloc(size_t nmemb, size_t size);
+	
 #endif

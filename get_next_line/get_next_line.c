@@ -12,142 +12,35 @@
 
 #include "get_next_line.h"
 
-int	hasnewline(t_list *list)
-{
-	char	*str;
-
-	str = list->content;
-	while (*str != '\0')
-	{
-		if (*str == '\n')
-			return (1);
-		str++;
-	}
-	return (0);
-}
-
-void	currlinetolist(t_list **list, int fd)
-{
-	char	*temp;
-	int		count;
-	t_list	*templist;
-
-	if (*list == NULL)
-		*list = ft_lstnew(NULL);
-	while (hasnewline(*list) == 0)
-	{
-		temp = malloc(BUFFER_SIZE + 1);
-		if (!temp)
-			return ;
-		count = read(fd, temp, BUFFER_SIZE);
-		if (count == 0)
-		{
-			free(temp);
-			return ;
-		}
-		temp[count] = 0;
-		templist = ft_lstnew(temp);
-		if (!templist)
-			return ;
-		ft_lstadd_back(list, templist);
-	}
-}
-
-char	*linetostr(t_list *list)
-{
-	char	*output;
-
-	if (list == NULL)
-		return (NULL);
-	output = malloc(getoutputlen(list) + 1);
-	if (output == NULL)
-		return (NULL);
-	listtostr(list, output);
-	return (output);
-}
-
-int	getoutputlen(t_list *list)
-{
-	int	len;
-	int	i;
-
-	len = 0;
-	if (list == NULL)
-		return (0);
-	while (list)
-	{
-		i = 0;
-		while (((char *)(list->content))[i])
-		{
-			if (((char *)(list->content))[i] == '\n')
-				return (++len);
-			i++;
-			len++;
-		}
-		list = list->next;
-	}
-	return (len);
-}
-
-void	resetlist(t_list **list)
-{
-	t_list	*last;
-	t_list	*resetted;
-	char	*temp;
-	int		i;
-	int		j;
-
-	temp = malloc(sizeof(char) * (BUFFER_SIZE + 1));
-	if (!temp)
-		return ;
-	last = ft_lstlast(*list);
-	i	 = 0;
-	while (((char *)(last->content))[i] != '\n' && ((char *)(last->content))[i])
-		i++;
-	j = 0;
-	while (((char *)(last->content))[i] != 0 && ((char *)(last->content))[++i])
-		temp[j++] = ((char *)(last->content))[i];
-	temp[j] = 0;
-	resetted = ft_lstnew(temp);
-	if (!resetted)
-		return ;
-	ft_lstclear(list, free);
-	*list = resetted;
-	free(temp);
-}
-
 char	*get_next_line(int fd)
 {
-	static	t_list *list = NULL;
-	char	*nextline;
+	static char	*memline = NULL;
+	char		*nextline;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, &nextline, 0) < 0)
+	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	currlinetolist(&list, fd);
-	if (list == NULL)
+	readnextline(fd, &memline);
+	if (memline == NULL)
 		return (NULL);
-	nextline = linetostr(list);
-	resetlist(&list);
+	nextline = ft_strchr(memline, '\n');
 	return (nextline);
 }
 
-void	listtostr(t_list *list, char *output)
+void readnextline(int fd, char **memline)
 {
-	int index = 0;
-	t_list *current = list;
+	char	*buf;
+	int		readsize;
 
-	while (current != NULL)
-	{
-		char *content = (char *)current->content;
-		int i = 0;
-
-		while (content[i] != '\0')
-		{
-			output[index++] = content[i++];
-		}
-
-		current = current->next;
-	}
-
-	output[index] = '\0';
+	buf = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
+	if (buf == NULL)
+		return (NULL);
+	readsize = read(fd, buf, BUFFER_SIZE);
+	if (readsize == -1)
+		return (NULL);
+	buf[readsize] = '\0';
+	if (*memline == NULL)
+		*memline = ft_strdup(buf);
+	else
+		*memline = ft_strjoin(*memline, buf);
+	free(buf);
 }

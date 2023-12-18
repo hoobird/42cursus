@@ -17,7 +17,7 @@ $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ) 
 	
 $(OBJ):	$(SRC)
-	$(CC)  $(CFLAGS) -c $(SRC) # $(BUFFER_FLAG) 
+	$(CC)  $(CFLAGS) $(BUFFER_FLAG) $(SRC)
 	
 clean:
 	rm -f $(OBJ) $(OBJB)
