@@ -17,7 +17,7 @@ int	hasnewline(t_list *list)
 	char	*str;
 
 	str = list->content;
-	while (*str)
+	while (*str != '\0')
 	{
 		if (*str == '\n')
 			return (1);
@@ -26,13 +26,15 @@ int	hasnewline(t_list *list)
 	return (0);
 }
 
-void	currlinetolist(t_list *list, int fd)
+void	currlinetolist(t_list **list, int fd)
 {
 	char	*temp;
 	int		count;
 	t_list	*templist;
 
-	while (hasnewline(list) == 0)
+	if (*list == NULL)
+		*list = ft_lstnew(NULL);
+	while (hasnewline(*list) == 0)
 	{
 		temp = malloc(BUFFER_SIZE + 1);
 		if (!temp)
@@ -47,7 +49,7 @@ void	currlinetolist(t_list *list, int fd)
 		templist = ft_lstnew(temp);
 		if (!templist)
 			return ;
-		ft_lstadd_back(&list, templist);
+		ft_lstadd_back(list, templist);
 	}
 }
 
@@ -55,6 +57,8 @@ char	*linetostr(t_list *list)
 {
 	char	*output;
 
+	if (list == NULL)
+		return (NULL);
 	output = malloc(getoutputlen(list) + 1);
 	if (output == NULL)
 		return (NULL);
@@ -85,7 +89,7 @@ int	getoutputlen(t_list *list)
 	return (len);
 }
 
-void	resetlist(t_list *list)
+void	resetlist(t_list **list)
 {
 	t_list	*last;
 	t_list	*resetted;
@@ -96,9 +100,9 @@ void	resetlist(t_list *list)
 	temp = malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!temp)
 		return ;
-	last = ft_lstlast(list);
-	i = 0;
-	while (((char *)(last->content))[i] != '\n' && ((char *)(last->content))[i] != 0)
+	last = ft_lstlast(*list);
+	i	 = 0;
+	while (((char *)(last->content))[i] != '\n' && ((char *)(last->content))[i])
 		i++;
 	j = 0;
 	while (((char *)(last->content))[i] != 0 && ((char *)(last->content))[++i])
@@ -107,26 +111,27 @@ void	resetlist(t_list *list)
 	resetted = ft_lstnew(temp);
 	if (!resetted)
 		return ;
-	ft_lstclear(&list, free);
-	list = resetted;
+	ft_lstclear(list, free);
+	*list = resetted;
+	free(temp);
 }
 
-char *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
-	static t_list *list = NULL;
-	char *nextline;
+	static	t_list *list = NULL;
+	char	*nextline;
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, &nextline, 0) < 0)
 		return (NULL);
-	currlinetolist(list, fd);
+	currlinetolist(&list, fd);
 	if (list == NULL)
 		return (NULL);
 	nextline = linetostr(list);
-	resetlist(list);
+	resetlist(&list);
 	return (nextline);
 }
 
-void listtostr(t_list *list, char *output)
+void	listtostr(t_list *list, char *output)
 {
 	int index = 0;
 	t_list *current = list;
