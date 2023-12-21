@@ -21,9 +21,9 @@
 # include <stdlib.h>
 
 char	*get_next_line(int fd);
-void	readnextline(int fd, char **memline);
-char	*ft_strchr(const char *s, int c);
-char	*ft_strdup(const char *s);
-void	*ft_calloc(size_t nmemb, size_t size);
-	
+void	readnextline(int fd, char *memline);
+size_t	ft_strlen(const char *s);
+void	myfree(char **ptr);
+int		newlinefound(char *memline);
+
 #endif
