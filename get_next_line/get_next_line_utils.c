@@ -16,6 +16,8 @@ size_t	ft_strlen(const char *s)
 	char	*temp;
 	int		count;
 
+	if (s == NULL)
+		return (0);
 	temp = (char *) s;
 	count = 0;
 	while (*temp)
@@ -48,29 +50,25 @@ void    myfree(char **ptr)
 char	*ft_strjoin(char *s1, char *s2)
 {
 	int		i;
+	int		j;
 	int		totallen;
 	char	*temp;
 
 	i = 0;
+	j = 0;
 	totallen = ft_strlen(s1) + ft_strlen(s2);
-	if (s1 == NULL || s2 == NULL)
-		return (NULL);
 	temp = (char *)malloc(sizeof(char) * (totallen + 1));
 	if (temp == NULL)
 		return (NULL);
-	while (*s1)
-	{
-		temp[i] = *s1;
-		i++;
-		s1++;
-	}
-	while (*s2)
-	{
-		temp[i] = *s2;
-		i++;
-		s2++;
-	}
+	if (s1)
+		while (s1[j])
+			temp[i++] = s1[j++];
+	j = 0;
+	while (s2[j])
+		temp[i++] = s2[j++];
 	temp[i] = '\0';
+	myfree(&s1);
+	myfree(&s2);
 	return (temp);
 }
 

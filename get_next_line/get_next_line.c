@@ -14,12 +14,12 @@
 
 char	*get_next_line(int fd)
 {
-	static char	*memline = "";
+	static char	*memline;
 	char		*nextline;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	readnextline(fd, memline);
+	memline = readnextline(fd, memline);
 	if (memline)
 	{
 		nextline = splitline(memline);
@@ -34,18 +34,20 @@ char	*readnextline(int fd, char *memline)
 	char	*buf;
 	int		readsize;
 
-	buf = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
-	if (buf == NULL)
-		return (NULL);
+	// if (memline == NULL)
+	// 	memline = malloc(0);
+	readsize = 1;
 	while (newlinefound(memline) == 0 && readsize)
 	{
+		buf = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
+		if (buf == NULL)
+			return (NULL);
 		readsize = read(fd, buf, BUFFER_SIZE);
 		if (readsize < 0)
 			return (myfree(&buf), myfree(&memline), NULL);
 		buf[readsize] = '\0';
 		memline = ft_strjoin(memline, buf);
 	}
-	myfree(&buf);
 	return (memline);
 }
 
