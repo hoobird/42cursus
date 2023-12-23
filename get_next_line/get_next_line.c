@@ -34,8 +34,6 @@ char	*readnextline(int fd, char *memline)
 	char	*buf;
 	int		readsize;
 
-	// if (memline == NULL)
-	// 	memline = malloc(0);
 	readsize = 1;
 	while (newlinefound(memline) == 0 && readsize)
 	{
@@ -51,7 +49,7 @@ char	*readnextline(int fd, char *memline)
 	return (memline);
 }
 
-char   *splitline(char *memline)
+char	*splitline(char *memline)
 {
 	int		i;
 	char	*temp;
@@ -65,7 +63,11 @@ char   *splitline(char *memline)
 		temp[i] = memline[i];
 		i++;
 		if (memline[i] == '\n')
-			break ;	
+		{
+			temp[i] = memline[i];
+			i++;
+			break ;
+		}
 	}
 	temp[i] = '\0';
 	return (temp);
@@ -85,8 +87,14 @@ char	*shiftline(char *memline)
 		temp = malloc(sizeof(char) * (newlen + 1));
 		if (!temp)
 			return (myfree(&temp), NULL);
-		ft_strlcpy(temp, newline + 1, newlen + 1);	
+		ft_strlcpy(temp, newline + 1, newlen + 1);
 	}
 	myfree(&memline);
 	return (temp);
+}
+
+void	myfree(char **ptr)
+{
+	free(*ptr);
+	*ptr = NULL;
 }

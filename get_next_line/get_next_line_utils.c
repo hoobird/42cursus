@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
 size_t	ft_strlen(const char *s)
 {
 	char	*temp;
@@ -28,7 +29,7 @@ size_t	ft_strlen(const char *s)
 	return (count);
 }
 
-int		newlinefound(char *memline)
+int	newlinefound(char *memline)
 {
 	if (memline == NULL)
 		return (0);
@@ -39,12 +40,6 @@ int		newlinefound(char *memline)
 		memline++;
 	}
 	return (0);
-}
-
-void    myfree(char **ptr)
-{
-	free(*ptr);
-	*ptr = NULL;
 }
 
 char	*ft_strjoin(char *s1, char *s2)
