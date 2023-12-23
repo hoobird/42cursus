@@ -16,11 +16,5 @@ int main()
 	s = get_next_line(file);
 	printf("%s\n", s);
 	free(s);
-	s = get_next_line(file);
-	printf("%s\n", s);
-	free(s);
-	s = get_next_line(file);
-	printf("%s\n", s);
-	free(s);
 	return (0);
 }
