@@ -1,6 +1,6 @@
 # 42cursus
 
-![Common Core]([./CommonCore.jpg)   
+![Common Core](./CommonCore.jpg)   
 
 ## Projects
 - Libft 
