@@ -20,7 +20,6 @@ $(OBJ):	$(SRC)
 $(FTPRINTF):
 	make -C $(FTPRINTF_PATH) all
 
-# Clean up object files and executable
 clean:
 	rm -f $(OBJS) $(TARGET)
 
