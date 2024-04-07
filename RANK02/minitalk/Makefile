@@ -1,30 +1,33 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-SRCS = client.c server.c
-OBJS = $(SRCS:.c=.o)
-TSERVER = server.o
-TCLIENT = client.o
+SRCS = server.c client.c
+NAME = server client
 FTPRINTF_PATH = ./ft_printf
 FTPRINTF = $(FTPRINTF_PATH)/libftprintf.a
+LIBFT_PATH = $(FTPRINTF_PATH)/libft
+LIBFT = $(FTPRINTF_PATH)/libft/libft.a
 
 all: $(NAME)
 
-lol : $(FTPRINTF)
-
-$(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $^ -o $@
-
-$(OBJ):	$(SRC)
-	$(CC) $(CFLAGS) -c $(SRC)
+$(NAME): $(SRCS) $(FTPRINTF) $(LIBFT)
+	$(CC) $(CFLAGS) server.c $(FTPRINTF) $(LIBFT) -o server
+	$(CC) $(CFLAGS) client.c $(FTPRINTF) $(LIBFT) -o client
 
 $(FTPRINTF):
 	make -C $(FTPRINTF_PATH) all
 
+$(LIBFT):
+	make -C $(LIBFT_PATH) all
+
 clean:
-	rm -f $(OBJS) $(TARGET)
+	rm -f $(OBJ)
+	make -C $(FTPRINTF_PATH) clean
+	make -C $(LIBFT_PATH) clean
 
 fclean: clean
-	rm -f $(TARGET)
+	rm -f $(NAME)
+	make -C $(FTPRINTF_PATH) fclean
+	make -C $(LIBFT_PATH) fclean
 
 re:	fclean all
 
