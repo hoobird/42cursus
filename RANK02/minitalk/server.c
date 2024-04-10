@@ -6,17 +6,18 @@
 /*   By: hulim <hulim@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 16:56:05 by hulim             #+#    #+#             */
-/*   Updated: 2024/04/10 18:40:32 by hulim            ###   ########.fr       */
+/*   Updated: 2024/04/11 01:36:47 by hulim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
 void	bittochar(int sigusr);
+void sendletter(char letter);
 
 int	main(int argc, char **argv)
 {
-	int	pid;
+	int		pid;
 
 	(void) argv;
 	if (argc != 1)
@@ -27,12 +28,10 @@ int	main(int argc, char **argv)
 	}
 	pid = getpid();
 	ft_printf("Server PID: %d\n", pid);
+	signal(SIGUSR1, bittochar);
+	signal(SIGUSR2, bittochar);
 	while (1)
-	{
-		signal(SIGUSR1, bittochar);
-		signal(SIGUSR2, bittochar);
 		pause();
-	}
 	return (0);
 }
 
@@ -50,8 +49,27 @@ void	bittochar(int sigusr)
 	bitcount++;
 	if (bitcount == 8)
 	{
-		ft_printf("%c", letter);
+		sendletter(letter);
 		bitcount = 0;
 		letter = 0;
 	}
+}
+
+void printcontent(void *content)
+{
+	char	*c;
+	
+	c = (char*) content;
+	write(1, c, 1);	
+}
+
+void sendletter(char letter)
+{
+	static t_list *head;
+
+	if (head == NULL)
+		ft_lstnew("");
+	if (letter == 0)
+		return (ft_lstiter(head, printcontent));
+	ft_lstadd_back(&head, ft_lstnew(&letter));
 }

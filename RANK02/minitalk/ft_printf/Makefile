@@ -21,7 +21,7 @@ $(OBJ):	$(SRC)
 	$(CC)  $(CFLAGS) -c $(SRC)
 
 $(LIBFT):
-	make -C $(LIBFTPATH) all
+	make -C $(LIBFTPATH) bonus
 	
 clean:
 	make -C $(LIBFTPATH) clean
