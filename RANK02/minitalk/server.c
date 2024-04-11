@@ -6,7 +6,7 @@
 /*   By: hulim <hulim@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 16:56:05 by hulim             #+#    #+#             */
-/*   Updated: 2024/04/11 16:27:04 by hulim            ###   ########.fr       */
+/*   Updated: 2024/04/11 16:44:19 by hulim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@ void	bittochar(int sigusr);
 int	main(int argc, char **argv)
 {
 	int					pid;
+	struct sigaction	as;
 
 	(void) argv;
+	as.sa_sigaction=bittochar;
 	if (argc != 1)
 	{
 		ft_printf("Error: Server doesn't take parameters\n");
