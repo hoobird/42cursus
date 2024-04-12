@@ -6,13 +6,13 @@
 /*   By: hulim <hulim@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 16:56:05 by hulim             #+#    #+#             */
-/*   Updated: 2024/04/11 16:44:19 by hulim            ###   ########.fr       */
+/*   Updated: 2024/04/12 16:06:36 by hulim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-void	bittochar(int sigusr);
+void	bittochar(int sig, siginfo_t *info, void *ucontext);
 
 int	main(int argc, char **argv)
 {
@@ -20,7 +20,8 @@ int	main(int argc, char **argv)
 	struct sigaction	as;
 
 	(void) argv;
-	as.sa_sigaction=bittochar;
+	as.sa_sigaction=&bittochar;
+	sigemptyset(&as.sa_mask);
 	if (argc != 1)
 	{
 		ft_printf("Error: Server doesn't take parameters\n");
@@ -29,20 +30,22 @@ int	main(int argc, char **argv)
 	}
 	pid = getpid();
 	ft_printf("Server PID: %d\n", pid);
-	signal(SIGUSR1, bittochar);
-	signal(SIGUSR2, bittochar);
+	sigaction(SIGUSR1, &as, NULL);
+	sigaction(SIGUSR2, &as, NULL);
 	while (1)
 		pause();
 	return (0);
 }
 
-void	bittochar(int sigusr)
+void	bittochar(int sig, siginfo_t *info, void *ucontext)
 {
 	static char		letter;
 	static size_t	bitcount;
 	unsigned char	mask;
 
-	if (sigusr == SIGUSR1)
+	(void) info;
+	(void) ucontext;
+	if (sig == SIGUSR1)
 	{
 		mask = 1 << bitcount;
 		letter = letter | mask;

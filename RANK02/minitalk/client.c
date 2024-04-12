@@ -6,7 +6,7 @@
 /*   By: hulim <hulim@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 01:27:00 by hulim             #+#    #+#             */
-/*   Updated: 2024/04/11 16:40:52 by hulim            ###   ########.fr       */
+/*   Updated: 2024/04/12 15:58:46 by hulim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int	sendchar(int pid, char c)
 		else
 			outcome = kill(pid, SIGUSR2);
 		bitcount++;
-		usleep(100);
+		usleep(10000);
 	}
 	return (outcome);
 }
