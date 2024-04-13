@@ -6,7 +6,7 @@
 /*   By: hulim <hulim@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 01:27:00 by hulim             #+#    #+#             */
-/*   Updated: 2024/04/12 15:58:46 by hulim            ###   ########.fr       */
+/*   Updated: 2024/04/12 16:54:45 by hulim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int	main(int argc, char **argv)
 		ft_printf("Error: Unable to send signal to specified PID\n");
 		return (0);
 	}
+	signal(SIGUSR1, confirmbitreceived);
+	/*signal(SIGUSR2, confirmbitreceived);*/
 	sendmsginbits(ft_atoi(argv[1]), argv[2]);
 	return (0);
 }
@@ -58,7 +60,7 @@ int	sendchar(int pid, char c)
 		else
 			outcome = kill(pid, SIGUSR2);
 		bitcount++;
-		usleep(10000);
+		pause();
 	}
 	return (outcome);
 }

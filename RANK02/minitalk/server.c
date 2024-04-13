@@ -6,7 +6,7 @@
 /*   By: hulim <hulim@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 16:56:05 by hulim             #+#    #+#             */
-/*   Updated: 2024/04/12 16:06:36 by hulim            ###   ########.fr       */
+/*   Updated: 2024/04/12 16:57:26 by hulim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,20 +41,28 @@ void	bittochar(int sig, siginfo_t *info, void *ucontext)
 {
 	static char		letter;
 	static size_t	bitcount;
-	unsigned char	mask;
+	static int		clientpid;
+	static int		currpid;
 
-	(void) info;
 	(void) ucontext;
-	if (sig == SIGUSR1)
+	if (!clientpid)
+		clientpid = info->si_pid;
+	currpid = info->si_pid;
+	if (currpid != clientpid)
 	{
-		mask = 1 << bitcount;
-		letter = letter | mask;
+		bitcount = 0;
+		letter = 0;
+		clientpid = currpid;
 	}
+	if (sig == SIGUSR1)
+		letter = letter | 1 << bitcount;
 	bitcount++;
+	kill(clientpid, SIGUSR1);
 	if (bitcount == 8)
 	{
 		write(1, &letter, 1);
 		bitcount = 0;
 		letter = 0;
 	}
+	pause();
 }
