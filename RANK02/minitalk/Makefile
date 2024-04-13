@@ -1,5 +1,5 @@
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 SRCS = server.c client.c
 NAME = server client
 FTPRINTF_PATH = ./ft_printf

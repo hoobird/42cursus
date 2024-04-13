@@ -6,15 +6,16 @@
 /*   By: hulim <hulim@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 01:27:00 by hulim             #+#    #+#             */
-/*   Updated: 2024/04/12 16:54:45 by hulim            ###   ########.fr       */
+/*   Updated: 2024/04/13 23:13:24 by hulim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-int	sendmsginbits(int pid, char *str);
-int	checkpidisnum(char *pid);
-int	sendchar(int pid, char c);
+int		sendmsginbits(int pid, char *str);
+int		checkpidisnum(char *pid);
+int		sendchar(int pid, char c);
+void	counter(int signum);
 
 
 int	main(int argc, char **argv)
@@ -25,16 +26,25 @@ int	main(int argc, char **argv)
 		ft_printf("Server PID and String to send\neg: ./client (pid) (msg)\n");
 		return (1);
 	}
+	signal(SIGUSR1, counter);
+	/*signal(SIGUSR2, confirmbitreceived);*/
 	if ((checkpidisnum(argv[1]) == 0) ||
 		(sendchar(ft_atoi(argv[1]), 0) == -1 ))
 	{
 		ft_printf("Error: Unable to send signal to specified PID\n");
 		return (0);
 	}
-	signal(SIGUSR1, confirmbitreceived);
-	/*signal(SIGUSR2, confirmbitreceived);*/
 	sendmsginbits(ft_atoi(argv[1]), argv[2]);
 	return (0);
+}
+
+void	counter(int signum)
+{
+	static int count;
+	
+	if (signum == SIGUSR1)
+		count++;
+	return;
 }
 
 int	sendmsginbits(int pid, char *str)
@@ -55,10 +65,13 @@ int	sendchar(int pid, char c)
 	bitcount = 0;
 	while (bitcount < 8)
 	{
+		usleep(200);
 		if (1 & (c >> bitcount))
 			outcome = kill(pid, SIGUSR1);
 		else
 			outcome = kill(pid, SIGUSR2);
+		if (outcome == -1)
+			return (-1);
 		bitcount++;
 		pause();
 	}

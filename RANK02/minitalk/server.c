@@ -6,7 +6,7 @@
 /*   By: hulim <hulim@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 16:56:05 by hulim             #+#    #+#             */
-/*   Updated: 2024/04/12 16:57:26 by hulim            ###   ########.fr       */
+/*   Updated: 2024/04/13 23:08:50 by hulim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	main(int argc, char **argv)
 
 	(void) argv;
 	as.sa_sigaction=&bittochar;
+	as.sa_flags = SA_SIGINFO;
 	sigemptyset(&as.sa_mask);
 	if (argc != 1)
 	{
@@ -57,12 +58,12 @@ void	bittochar(int sig, siginfo_t *info, void *ucontext)
 	if (sig == SIGUSR1)
 		letter = letter | 1 << bitcount;
 	bitcount++;
-	kill(clientpid, SIGUSR1);
 	if (bitcount == 8)
 	{
 		write(1, &letter, 1);
 		bitcount = 0;
 		letter = 0;
 	}
-	pause();
+	usleep(200);
+	kill(clientpid, SIGUSR1);
 }
