@@ -6,7 +6,7 @@
 /*   By: hulim <hulim@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 16:56:05 by hulim             #+#    #+#             */
-/*   Updated: 2024/04/13 23:08:50 by hulim            ###   ########.fr       */
+/*   Updated: 2024/04/14 16:00:02 by hulim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,6 @@ void	bittochar(int sig, siginfo_t *info, void *ucontext)
 		bitcount = 0;
 		letter = 0;
 	}
-	usleep(200);
+	usleep(2000);
 	kill(clientpid, SIGUSR1);
 }

@@ -6,7 +6,7 @@
 /*   By: hulim <hulim@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 01:27:00 by hulim             #+#    #+#             */
-/*   Updated: 2024/04/13 23:13:24 by hulim            ###   ########.fr       */
+/*   Updated: 2024/04/14 15:48:17 by hulim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int	sendchar(int pid, char c)
 	bitcount = 0;
 	while (bitcount < 8)
 	{
-		usleep(200);
+		usleep(500);
 		if (1 & (c >> bitcount))
 			outcome = kill(pid, SIGUSR1);
 		else
@@ -73,7 +73,9 @@ int	sendchar(int pid, char c)
 		if (outcome == -1)
 			return (-1);
 		bitcount++;
+		ft_printf("Stuck");
 		pause();
+		ft_printf("Not Stuck");
 	}
 	return (outcome);
 }
