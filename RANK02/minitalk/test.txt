@@ -1,5 +1,105 @@
-./client 2678 "1 Kings 13:11	Now there dwelt an old prophet in Bethel; and his sons came and told him all the works that the man of God had done that day in Bethel: the words which he had spoken unto the king, them they told also to their father."
-./client 2678 "2 Chronicles 7:13	If I shut up heaven that there be no rain, or if I command the locusts to devour the land, or if I send pestilence among my people;"
-./client 2678 "Luke 23:42	And he said unto Jesus, Lord, remember me when thou comest into thy kingdom."
-./client 2678 "Matthew 8:18	Now when Jesus saw great multitudes about him, he gave commandment to depart unto the other side."
-./client 2678 "Acts 20:21	Testifying both to the Jews, and also to the Greeks, repentance toward God, and faith toward our Lord Jesus Christ."
+./client 5786  "Jeremiah 40:12	Even all the Jews returned out of all places whither they were driven, and came to the land of Judah, to Gedaliah, unto Mizpah, and gathered wine and summer fruits very much.
+Luke 23:14	Said unto them, Ye have brought this man unto me, as one that perverteth the people: and, behold, I, having examined [him] before you, have found no fault in this man touching those things whereof ye accuse him:
+2 Samuel 10:5	When they told [it] unto David, he sent to meet them, because the men were greatly ashamed: and the king said, Tarry at Jericho until your beards be grown, and [then] return.
+Psalm 103:2	Bless the LORD, O my soul, and forget not all his benefits:
+Jeremiah 4:6	Set up the standard toward Zion: retire, stay not: for I will bring evil from the north, and a great destruction.
+Proverbs 9:15	To call passengers who go right on their ways:
+Exodus 19:24	And the LORD said unto him, Away, get thee down, and thou shalt come up, thou, and Aaron with thee: but let not the priests and the people break through to come up unto the LORD, lest he break forth upon them.
+Genesis 5:18	And Jared lived an hundred sixty and two years, and he begat Enoch:
+Acts 23:18	So he took him, and brought [him] to the chief captain, and said, Paul the prisoner called me unto [him], and prayed me to bring this young man unto thee, who hath something to say unto thee.
+Psalm 119:123	Mine eyes fail for thy salvation, and for the word of thy righteousness.
+Acts 8:9	But there was a certain man, called Simon, which beforetime in the same city used sorcery, and bewitched the people of Samaria, giving out that himself was some great one:
+Deuteronomy 11:25	There shall no man be able to stand before you: [for] the LORD your God shall lay the fear of you and the dread of you upon all the land that ye shall tread upon, as he hath said unto you.
+Matthew 1:1	The book of the generation of Jesus Christ, the son of David, the son of Abraham.
+Leviticus 4:30	And the priest shall take of the blood thereof with his finger, and put [it] upon the horns of the altar of burnt offering, and shall pour out all the blood thereof at the bottom of the altar.
+Proverbs 23:4	Labour not to be rich: cease from thine own wisdom.
+Mark 12:6	Having yet therefore one son, his wellbeloved, he sent him also last unto them, saying, They will reverence my son.
+Jeremiah 28:6	Even the prophet Jeremiah said, Amen: the LORD do so: the LORD perform thy words which thou hast prophesied, to bring again the vessels of the LORD’S house, and all that is carried away captive, from Babylon into this place.
+Luke 24:9	And returned from the sepulchre, and told all these things unto the eleven, and to all the rest.
+John 6:69	And we believe and are sure that thou art that Christ, the Son of the living God.
+Ezekiel 23:46	For thus saith the Lord GOD; I will bring up a company upon them, and will give them to be removed and spoiled.
+"
+./client 5786  "Ezekiel 21:11	And he hath given it to be furbished, that it may be handled: this sword is sharpened, and it is furbished, to give it into the hand of the slayer.
+Galatians 6:10	As we have therefore opportunity, let us do good unto all [men], especially unto them who are of the household of faith.
+Numbers 17:8	And it came to pass, that on the morrow Moses went into the tabernacle of witness; and, behold, the rod of Aaron for the house of Levi was budded, and brought forth buds, and bloomed blossoms, and yielded almonds.
+Proverbs 25:27	[It is] not good to eat much honey: so [for men] to search their own glory [is not] glory.
+Jeremiah 40:15	Then Johanan the son of Kareah spake to Gedaliah in Mizpah secretly, saying, Let me go, I pray thee, and I will slay Ishmael the son of Nethaniah, and no man shall know [it]: wherefore should he slay thee, that all the Jews which are gathered unto thee should be scattered, and the remnant in Judah perish?
+Colossians 4:6	Let your speech [be] alway with grace, seasoned with salt, that ye may know how ye ought to answer every man.
+Joshua 15:24	Ziph, and Telem, and Bealoth,
+Leviticus 26:28	Then I will walk contrary unto you also in fury; and I, even I, will chastise you seven times for your sins.
+Genesis 4:9	And the LORD said unto Cain, Where [is] Abel thy brother? And he said, I know not: [Am] I my brother’s keeper?
+Psalm 45:12	And the daughter of Tyre [shall be there] with a gift; [even] the rich among the people shall intreat thy favour.
+Luke 9:14	For they were about five thousand men. And he said to his disciples, Make them sit down by fifties in a company.
+1 Kings 16:34	In his days did Hiel the Bethelite build Jericho: he laid the foundation thereof in Abiram his firstborn, and set up the gates thereof in his youngest [son] Segub, according to the word of the LORD, which he spake by Joshua the son of Nun.
+Luke 1:21	And the people waited for Zacharias, and marvelled that he tarried so long in the temple.
+Leviticus 4:25	And the priest shall take of the blood of the sin offering with his finger, and put [it] upon the horns of the altar of burnt offering, and shall pour out his blood at the bottom of the altar of burnt offering.
+Daniel 12:8	And I heard, but I understood not: then said I, O my Lord, what [shall be] the end of these [things]?
+2 Chronicles 11:12	And in every several city [he put] shields and spears, and made them exceeding strong, having Judah and Benjamin on his side.
+1 Samuel 1:16	Count not thine handmaid for a daughter of Belial: for out of the abundance of my complaint and grief have I spoken hitherto.
+Genesis 8:20	And Noah builded an altar unto the LORD; and took of every clean beast, and of every clean fowl, and offered burnt offerings on the altar.
+1 Samuel 20:3	And David sware moreover, and said, Thy father certainly knoweth that I have found grace in thine eyes; and he saith, Let not Jonathan know this, lest he be grieved: but truly [as] the LORD liveth, and [as] thy soul liveth, [there is] but a step between me and death.
+Joshua 14:1	And these [are the countries] which the children of Israel inherited in the land of Canaan, which Eleazar the priest, and Joshua the son of Nun, and the heads of the fathers of the tribes of the children of Israel, distributed for inheritance to them.
+"
+./client 5786  "1 Timothy 2:8	I will therefore that men pray every where, lifting up holy hands, without wrath and doubting.
+Jeremiah 7:18	The children gather wood, and the fathers kindle the fire, and the women knead [their] dough, to make cakes to the queen of heaven, and to pour out drink offerings unto other gods, that they may provoke me to anger.
+Leviticus 26:11	And I will set my tabernacle among you: and my soul shall not abhor you.
+Luke 9:26	For whosoever shall be ashamed of me and of my words, of him shall the Son of man be ashamed, when he shall come in his own glory, and [in his] Father’s, and of the holy angels.
+2 Chronicles 26:2	He built Eloth, and restored it to Judah, after that the king slept with his fathers.
+Numbers 29:28	And one goat [for] a sin offering; beside the continual burnt offering, and his meat offering, and his drink offering.
+Ezekiel 31:9	I have made him fair by the multitude of his branches: so that all the trees of Eden, that [were] in the garden of God, envied him.
+Job 1:11	But put forth thine hand now, and touch all that he hath, and he will curse thee to thy face.
+John 4:36	And he that reapeth receiveth wages, and gathereth fruit unto life eternal: that both he that soweth and he that reapeth may rejoice together.
+Jeremiah 42:15	And now therefore hear the word of the LORD, ye remnant of Judah; Thus saith the LORD of hosts, the God of Israel; If ye wholly set your faces to enter into Egypt, and go to sojourn there;
+Psalm 33:20	Our soul waiteth for the LORD: he [is] our help and our shield.
+Amos 4:2	The Lord GOD hath sworn by his holiness, that, lo, the days shall come upon you, that he will take you away with hooks, and your posterity with fishhooks.
+Proverbs 6:24	To keep thee from the evil woman, from the flattery of the tongue of a strange woman.
+Nehemiah 12:14	Of Melicu, Jonathan; of Shebaniah, Joseph;
+Psalm 24:6	This [is] the generation of them that seek him, that seek thy face, O Jacob. Selah.
+Judges 14:18	And the men of the city said unto him on the seventh day before the sun went down, What [is] sweeter than honey? and what [is] stronger than a lion? And he said unto them, If ye had not plowed with my heifer, ye had not found out my riddle.
+Numbers 33:35	And they departed from Ebronah, and encamped at Eziongaber.
+Isaiah 37:36	Then the angel of the LORD went forth, and smote in the camp of the Assyrians a hundred and fourscore and five thousand: and when they arose early in the morning, behold, they [were] all dead corpses.
+Job 12:19	He leadeth princes away spoiled, and overthroweth the mighty.
+Joshua 10:24	And it came to pass, when they brought out those kings unto Joshua, that Joshua called for all the men of Israel, and said unto the captains of the men of war which went with him, Come near, put your feet upon the necks of these kings. And they came near, and put their feet upon the necks of them.
+"
+./client 5786  "2 Thessalonians 3:12	Now them that are such we command and exhort by our Lord Jesus Christ, that with quietness they work, and eat their own bread.
+Proverbs 31:30	Favour [is] deceitful, and beauty [is] vain: [but] a woman [that] feareth the LORD, she shall be praised.
+2 Samuel 15:8	For thy servant vowed a vow while I abode at Geshur in Syria, saying, If the LORD shall bring me again indeed to Jerusalem, then I will serve the LORD.
+Exodus 29:22	Also thou shalt take of the ram the fat and the rump, and the fat that covereth the inwards, and the caul [above] the liver, and the two kidneys, and the fat that [is] upon them, and the right shoulder; for it [is] a ram of consecration:
+John 20:13	And they say unto her, Woman, why weepest thou? She saith unto them, Because they have taken away my Lord, and I know not where they have laid him.
+Deuteronomy 25:2	And it shall be, if the wicked man [be] worthy to be beaten, that the judge shall cause him to lie down, and to be beaten before his face, according to his fault, by a certain number.
+Psalm 147:2	The LORD doth build up Jerusalem: he gathereth together the outcasts of Israel.
+Acts 12:17	But he, beckoning unto them with the hand to hold their peace, declared unto them how the Lord had brought him out of the prison. And he said, Go shew these things unto James, and to the brethren. And he departed, and went into another place.
+Leviticus 6:18	All the males among the children of Aaron shall eat of it. [It shall be] a statute for ever in your generations concerning the offerings of the LORD made by fire: every one that toucheth them shall be holy.
+2 Chronicles 35:24	His servants therefore took him out of that chariot, and put him in the second chariot that he had; and they brought him to Jerusalem, and he died, and was buried in [one of] the sepulchres of his fathers. And all Judah and Jerusalem mourned for Josiah.
+Numbers 23:22	God brought them out of Egypt; he hath as it were the strength of an unicorn.
+Joshua 6:7	And he said unto the people, Pass on, and compass the city, and let him that is armed pass on before the ark of the LORD.
+Deuteronomy 26:9	And he hath brought us into this place, and hath given us this land, [even] a land that floweth with milk and honey.
+Psalm 78:20	Behold, he smote the rock, that the waters gushed out, and the streams overflowed; can he give bread also? can he provide flesh for his people?
+Daniel 11:4	And when he shall stand up, his kingdom shall be broken, and shall be divided toward the four winds of heaven; and not to his posterity, nor according to his dominion which he ruled: for his kingdom shall be plucked up, even for others beside those.
+Isaiah 1:7	Your country [is] desolate, your cities [are] burned with fire: your land, strangers devour it in your presence, and [it is] desolate, as overthrown by strangers.
+Philemon 1:19	I Paul have written [it] with mine own hand, I will repay [it]: albeit I do not say to thee how thou owest unto me even thine own self besides.
+Proverbs 11:29	He that troubleth his own house shall inherit the wind: and the fool [shall be] servant to the wise of heart.
+Ezekiel 36:27	And I will put my spirit within you, and cause you to walk in my statutes, and ye shall keep my judgments, and do [them].
+Luke 1:69	And hath raised up an horn of salvation for us in the house of his servant David;
+"
+./client 5786  "Philippians 1:17	But the other of love, knowing that I am set for the defence of the gospel.
+Jeremiah 2:21	Yet I had planted thee a noble vine, wholly a right seed: how then art thou turned into the degenerate plant of a strange vine unto me?
+1 Timothy 5:8	But if any provide not for his own, and specially for those of his own house, he hath denied the faith, and is worse than an infidel.
+John 16:1	These things have I spoken unto you, that ye should not be offended.
+Jeremiah 32:27	Behold, I [am] the LORD, the God of all flesh: is there any thing too hard for me?
+Luke 22:45	And when he rose up from prayer, and was come to his disciples, he found them sleeping for sorrow,
+Genesis 11:1	And the whole earth was of one language, and of one speech.
+Psalm 78:22	Because they believed not in God, and trusted not in his salvation:
+Genesis 42:5	And the sons of Israel came to buy [corn] among those that came: for the famine was in the land of Canaan.
+Proverbs 10:24	The fear of the wicked, it shall come upon him: but the desire of the righteous shall be granted.
+Judges 1:13	And Othniel the son of Kenaz, Caleb’s younger brother, took it: and he gave him Achsah his daughter to wife.
+1 Kings 18:11	And now thou sayest, Go, tell thy lord, Behold, Elijah [is here].
+Psalm 147:20	He hath not dealt so with any nation: and [as for his] judgments, they have not known them. Praise ye the LORD.
+Daniel 2:40	And the fourth kingdom shall be strong as iron: forasmuch as iron breaketh in pieces and subdueth all [things]: and as iron that breaketh all these, shall it break in pieces and bruise.
+Ecclesiastes 9:8	Let thy garments be always white; and let thy head lack no ointment.
+Luke 20:19	And the chief priests and the scribes the same hour sought to lay hands on him; and they feared the people: for they perceived that he had spoken this parable against them.
+Esther 4:11	All the king’s servants, and the people of the king’s provinces, do know, that whosoever, whether man or woman, shall come unto the king into the inner court, who is not called, [there is] one law of his to put [him] to death, except such to whom the king shall hold out the golden sceptre, that he may live: but I have not been called to come in unto the king these thirty days.
+Numbers 10:28	Thus [were] the journeyings of the children of Israel according to their armies, when they set forward.
+Daniel 4:19	Then Daniel, whose name [was] Belteshazzar, was astonied for one hour, and his thoughts troubled him. The king spake, and said, Belteshazzar, let not the dream, or the interpretation thereof, trouble thee. Belteshazzar answered and said, My lord, the dream [be] to them that hate thee, and the interpretation thereof to thine enemies.
+Genesis 3:24	So he drove out the man; and he placed at the east of the garden of Eden Cherubims, and a flaming sword which turned every way, to keep the way of the tree of life.
+"

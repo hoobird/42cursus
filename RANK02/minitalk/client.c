@@ -6,7 +6,7 @@
 /*   By: hulim <hulim@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 01:27:00 by hulim             #+#    #+#             */
-/*   Updated: 2024/04/14 15:48:17 by hulim            ###   ########.fr       */
+/*   Updated: 2024/04/14 21:33:15 by hulim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int		checkpidisnum(char *pid);
 int		sendchar(int pid, char c);
 void	counter(int signum);
 
-
 int	main(int argc, char **argv)
 {
 	if (argc != 3)
@@ -27,24 +26,23 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	signal(SIGUSR1, counter);
-	/*signal(SIGUSR2, confirmbitreceived);*/
-	if ((checkpidisnum(argv[1]) == 0) ||
-		(sendchar(ft_atoi(argv[1]), 0) == -1 ))
+	if ((checkpidisnum(argv[1]) == 0)
+		|| (sendchar(ft_atoi(argv[1]), 0) == -1))
 	{
 		ft_printf("Error: Unable to send signal to specified PID\n");
 		return (0);
 	}
-	sendmsginbits(ft_atoi(argv[1]), argv[2]);
+	sendmsginbits(ft_atoi(argv[1]), ft_strjoin(argv[2], "\n"));
 	return (0);
 }
 
 void	counter(int signum)
 {
-	static int count;
-	
+	static int	count;
+
 	if (signum == SIGUSR1)
 		count++;
-	return;
+	return ;
 }
 
 int	sendmsginbits(int pid, char *str)
@@ -73,9 +71,7 @@ int	sendchar(int pid, char c)
 		if (outcome == -1)
 			return (-1);
 		bitcount++;
-		ft_printf("Stuck");
 		pause();
-		ft_printf("Not Stuck");
 	}
 	return (outcome);
 }

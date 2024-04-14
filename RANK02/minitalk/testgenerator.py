@@ -13,7 +13,10 @@ def main():
 			lines = bible.readlines()
 			ttllines = len(lines)
 			for i in range(5):
-				f.write(f"{template}\"{lines[random.randint(0,ttllines-1)].strip()}\"\n")
+				f.write(f"{template} \"")
+				for i in range(20):
+					f.write(f"{lines[random.randint(0,ttllines-1)].strip()}\n")
+				f.write(f"\"\n")
 
 if __name__ == "__main__":
 	main()
