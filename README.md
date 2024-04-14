@@ -4,8 +4,10 @@
 
 ## Projects
 
-### Rank00
-- Libft          ✅
+| RANK | PROJECT | STATUS |
+| ---- | ------- | ------ |
+| Rank00 | [Libft] | ✅ | 
+| Rank01 | [ft_printf] | ✅ |
 ### Rank01
 - ft_printf      ✅
 - get_next_line  ✅
