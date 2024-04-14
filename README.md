@@ -18,8 +18,10 @@
 
 [//]: # 
    [42 Singapore]: <https://www.42singapore.sg>
-
-
+   [Libft]: <https://github.com/hoobird/Libft>
+   [ft_printf]: <https://github.com/hoobird/ft_printf>
+   [get_next_line]: <https://github.com/hoobird/get_next_line>
+   [minitalk]: <https://github.com/hoobird/minitalk>
 
 
 
