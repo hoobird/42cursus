@@ -4,13 +4,13 @@
 ## Projects
 | RANK | PROJECT | STATUS | SUMMARY |
 | ---- | ------- | ------ | ------- |
-| Rank00 | [Libft] | ✅ | This project is about coding a C library. <br> It will contain a lot of general purpose functions your programs will rely upon.
-| Rank01 | [ft_printf] | ✅ | Recode a popular and versatile function --> printf() <br> & learn about variadic function |
-|  | [get_next_line] | ✅ | This project is about programming a function that returns a line read from a filc descriptor <br> & learn about static variable |
-|  | [born2beroot] | ✅ | Introduction to virtualisation, System Admin related exercise <br> Tasked with setting up your own OS while implementing strict rules |
+| Rank00 | [Libft] | ✅ | This project is about coding a C library.  It will contain a lot of general purpose functions your programs will rely upon.
+| Rank01 | [ft_printf] | ✅ | Recode a popular and versatile function --> printf()  & learn about variadic function |
+|  | [get_next_line] | ✅ | This project is about programming a function that returns a line read from a filc descriptor  & learn about static variable |
+|  | [born2beroot] | ✅ | Introduction to virtualisation, System Admin related exercise  Tasked with setting up your own OS while implementing strict rules |
 | Rank02 | [minitalk] | ✅ | The purpose of this project is to code a small data exchange program using UNIX signals. |
-|  | [fract-ol] | |
-|  | [push_swap] |   |
+|  | [push_swap] | 🚧 |This project will make you sort data on a stack, with a limited set of instructions, using the lowest possible number of actions. To succeed you’ll have to manipulate various types of algorithms and choose the most appropriate solution (out of many) for an optimized data sorting |
+|  | [fract-ol] | 🔜 | |
 
 
 
