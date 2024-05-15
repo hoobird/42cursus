@@ -10,7 +10,7 @@
 |  | [born2beroot] | ✅ | Introduction to virtualisation, System Admin related exercise  Tasked with setting up your own OS while implementing strict rules |
 | Rank02 | [minitalk] | ✅ | The purpose of this project is to code a small data exchange program using UNIX signals. |
 |  | [push_swap] | 🚧 |This project will make you sort data on a stack, with a limited set of instructions, using the lowest possible number of actions. To succeed you’ll have to manipulate various types of algorithms and choose the most appropriate solution (out of many) for an optimized data sorting |
-|  | [fract-ol] | 🔜 | |
+|  | [so_long] | 🚧 | |
 
 
 
