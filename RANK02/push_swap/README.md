@@ -14,17 +14,12 @@ The "Push_swap" project is a simple yet challenging algorithm project. The goal 
 
 ### Installation
 
-1. Clone the repository:
+1. Clone the repository and navigate to the project directory:
     ```bash
-    git clone https://github.com/yourusername/push_swap.git
+    cd 42cursus/RANK02/push_swap
     ```
 
-2. Navigate to the project directory:
-    ```bash
-    cd push_swap
-    ```
-
-3. Compile the project:
+2. Compile the project:
     ```bash
     make
     ```
