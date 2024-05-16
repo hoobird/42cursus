@@ -31,7 +31,7 @@ The "so_long" project is a small 2D game where the player, Wall-E, must collect 
 
 To run the game, provide a map file in the `.ber` format:
 ```bash
-./so_long maps/map1.ber
+./so_long maps map1.ber
 ```
 
 ### Example Map
@@ -114,7 +114,7 @@ For the bonus part, additional features such as animations, more complex enemy b
 
 To start the game with a specific map:
 ```bash
-./so_long maps/example_map.ber
+./so_long maps example_map.ber
 ```
 
 ### Example Output
