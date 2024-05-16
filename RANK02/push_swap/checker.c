@@ -37,7 +37,7 @@ int	main(int argc, char **argv)
 	}
 	freestack(&a, &b);
 	freenumstr(numstr);
-	return (0);	
+	return (0);
 }
 
 int	islinelegit(char *line)
