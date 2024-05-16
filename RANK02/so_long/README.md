@@ -1,6 +1,6 @@
 ![walleeve](./Extra/wallebg.png)
 # so_long
-
+![gameplay](./Extra/gameplay.gif)
 ## Description
 
 The "so_long" project is a small 2D game where the player, Wall-E, must collect all the Sapling Plants and reach Eve to win the game. This project helps you work with textures, sprites, and basic gameplay elements, using the MiniLibX graphical library.
