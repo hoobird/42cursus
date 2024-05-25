@@ -30,4 +30,4 @@ fclean: clean
 
 re:	fclean all
 
-phony: all fclean clean re libft ft_printf
+.phony: all fclean clean re libft ft_printf
