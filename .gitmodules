@@ -13,3 +13,12 @@
 [submodule "RANK01/get_next_line"]
 	path = RANK01/get_next_line
 	url = git@github.com:hoobird/get_next_line.git
+[submodule "RANK02/minitalk"]
+	path = RANK02/minitalk
+	url = git@github.com:hoobird/minitalk.git
+[submodule "RANK02/push_swap"]
+	path = RANK02/push_swap
+	url = git@github.com:hoobird/push_swap.git
+[submodule "RANK02/so_long"]
+	path = RANK02/so_long
+	url = git@github.com:hoobird/so_long.git
