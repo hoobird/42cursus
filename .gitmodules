@@ -7,3 +7,9 @@
 [submodule "RANK01/born2beroot"]
 	path = RANK01/born2beroot
 	url = git@github.com:hoobird/born2beroot.git
+[submodule "RANK01/ft_printf"]
+	path = RANK01/ft_printf
+	url = git@github.com:hoobird/ft_printf.git
+[submodule "RANK01/get_next_line"]
+	path = RANK01/get_next_line
+	url = git@github.com:hoobird/get_next_line.git
