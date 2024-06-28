@@ -1,0 +1,3 @@
+[submodule "42CoreSubjects"]
+	path = 42CoreSubjects
+	url = git@github.com:hoobird/42CoreSubjects.git
