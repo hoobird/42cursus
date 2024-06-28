@@ -20,15 +20,16 @@
 ## Cursus
 ![Common Core](./README_/CommonCore.jpg)   
 
-[//]: # 
-   [42 Singapore]: <https://www.42singapore.sg>
-   [Libft]: <./RANK00/Libft>
-   [ft_printf]: <./RANK01/ft_printf>
-   [get_next_line]: <./RANK01/get_next_line>
-   [born2beroot]: <./RANK01/Born2beroot>
-   [minitalk]: <./RANK02/minitalk>
-   [push_swap]: <./RANK02/push_swap>
-   [so_long]: <./RANK02/so_long>
+[//]: #
+   [42 Singapore]:   <https://www.42singapore.sg>
+   [Libft]:          <https://github.com/hoobird/Libft>
+   [ft_printf]:      <https://github.com/hoobird/ft_printf>
+   [get_next_line]:  <https://github.com/hoobird/get_next_line>
+   [born2beroot]:    <https://github.com/hoobird/Born2beroot>
+   [minitalk]:       <https://github.com/hoobird/minitalk>
+   [push_swap]:      <https://github.com/hoobird/push_swap>
+   [so_long]:        <https://github.com/hoobird/so_long>
+
 
 
 
