@@ -1,3 +1,6 @@
 [submodule "42CoreSubjects"]
 	path = 42CoreSubjects
 	url = git@github.com:hoobird/42CoreSubjects.git
+[submodule "RANK00/Libft"]
+	path = RANK00/Libft
+	url = git@github.com:hoobird/Libft.git
