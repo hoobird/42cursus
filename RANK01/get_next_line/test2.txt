@@ -1,3 +1,0 @@
-test2 first lines
-test2 second very long long long long lines
-test2 is testing the limits of the bonus

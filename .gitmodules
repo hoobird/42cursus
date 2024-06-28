@@ -4,3 +4,6 @@
 [submodule "RANK00/Libft"]
 	path = RANK00/Libft
 	url = git@github.com:hoobird/Libft.git
+[submodule "RANK01/born2beroot"]
+	path = RANK01/born2beroot
+	url = git@github.com:hoobird/born2beroot.git
