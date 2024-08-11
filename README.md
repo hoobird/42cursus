@@ -18,8 +18,8 @@
 | Rank02 | [minitalk] | ✅ | The purpose of this project is to code a small data exchange program using UNIX signals. |
 |        | [push_swap] | ✅ |This project will make you sort data on a stack, with a limited set of instructions, using the lowest possible number of actions. To succeed you’ll have to manipulate various types of algorithms and choose the most appropriate solution (out of many) for an optimized data sorting |
 |        | [so_long] | ✅ | This project is a small 2D game with graphics library minilibx. You'll learn about textures, sprites and tiles. |
-| Rank03 | [Philosophers] | 🚧 | Eat, Sleep, Spaghetti, repeat. This project is about learning how threads work by precisely timing a group of philosophers on when to pick up forks and eat spaghetti without dying from hunger. |
-|        | [minishell] | 🚧 | The objective of this project is for you to create a simple shell. |
+| Rank03 | [Philosophers] | ✅ | Eat, Sleep, Spaghetti, repeat. This project is about learning how threads work by precisely timing a group of philosophers on when to pick up forks and eat spaghetti without dying from hunger. |
+|        | [Minishell] | 🚧 | The objective of this project is for you to create a simple shell that mimics Bash behaviour. |
 
 
 
@@ -36,6 +36,8 @@
    [minitalk]:       <https://github.com/hoobird/minitalk>
    [push_swap]:      <https://github.com/hoobird/push_swap>
    [so_long]:        <https://github.com/hoobird/so_long>
+   [Philosophers]:    <https://github.com/hoobird/Philosophers>
+   [Minishell]:      <https://github.com/hoobird/Minishell>
 
 
 
