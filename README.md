@@ -20,8 +20,11 @@
 |        | [so_long] | ✅ | This project is a small 2D game with graphics library minilibx. You'll learn about textures, sprites and tiles. |
 | Rank03 | [Philosophers] | ✅ | Eat, Sleep, Spaghetti, repeat. This project is about learning how threads work by precisely timing a group of philosophers on when to pick up forks and eat spaghetti without dying from hunger. |
 |        | [Minishell] | ✅ | The objective of this project is for you to create a simple shell that mimics Bash behaviour. |
-| Rank04 | [miniRT] | 🚧 | This project is an introduction to the beautiful world of Raytracing. |
-|        | [CPP Modules] | 🚧 | This project is to introduce OOP with CPP |
+| Rank04-05| [CPP Modules] | ✅ | This project is to introduce OOP with CPP |
+| Rank04 | [miniRT] | ✅ | This project is an introduction to the beautiful world of Raytracing. |
+| Rank05 | [ft_irc] | ✅ | Create your own IRC server in C++98, compatible with a standard IRC client for the required features. |
+| Rank05 | [Inception] | ✅ | Broaden your system administration skills by working with Docker. In this project, you'll set up a complete infrastructure using Docker Compose, creating and managing multiple containerized services including NGINX with SSL/TLS, WordPress with php-fpm, and MariaDB. You'll gain hands-on experience with containerization, networking, volume management, and secure web service deployment within your own personal virtual machine. |
+| Rank06 | [ft_transcendence] | ✅ | Design, develop, and organize a full-stack web application with complete creative freedom. Choose your project concept, select from a wide range of technical modules, and make key architectural decisions. This highly flexible project allows you to explore modern web development while demonstrating your technical skills and creativity through a modular approach. |
 
 
 
