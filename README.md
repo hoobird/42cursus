@@ -1,14 +1,11 @@
 # [42 Singapore]
 42 Singapore is an innovative and inclusive ICT school that offers tuition-fee free training to equip learners with the most-in-demand tech skills for jobs, accessible to all. Instead of teachers and lectures, it uses a unique peer-learning approach and offers 100% hands-on project-based learning in a gamified environment to develop technical and soft skills needed for the industry. 42 Singapore is using the pedagogy created by 42 Paris in 2013. The adoption of the pedagogy ensures that students at 42 Singapore benefit from the same teaching methods and philosophy that have made Ecole 42 successful in France and around the world.
 
-### How to clone with submodules
+### Subjects
+Due to 42 Terms and Conditions, I am not allowed to share the Subject pdf anymore. If you click on the link, it is privated.
 
-1. Instead of git clone <repo>
-    ```bash
-    git clone --recursive -j4  git@github.com:hoobird/42cursus.git
-    ```
 ## Projects
-| RANK | PROJECT | SUBJECT | SUMMARY |
+| RANK | PROJECT | SUBJECT (No public access) | SUMMARY |
 | ---- | ------- | ------- | ------- |
 | Rank00 | [Libft] | [0_Libft.pdf] | This project is about coding a C library.  It will contain a lot of general purpose functions your programs will rely upon. |
 | Rank01 | [ft_printf] | [1_ft_printf.pdf] | Recode a popular and versatile function --> printf()  & learn about variadic function |
