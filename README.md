@@ -45,7 +45,11 @@
    [so_long]:        <https://github.com/hoobird/so_long>
    [Philosophers]:    <https://github.com/hoobird/Philosophers>
    [Minishell]:      <https://github.com/hoobird/Minishell>
-
+   [miniRT]:        <https://github.com/hoobird/miniRT>
+   [CPP Modules]:  <https://github.com/hoobird/CPP-Modules>
+   [ft_irc]:    <https://github.com/hoobird/ft_irc>
+   [Inception]:    <https://github.com/hoobird/Inception>
+   [ft_transcendence]:    <https://github.com/hoobird/ft_transcendence>
 
 
 
